@@ -24,7 +24,7 @@ public class ClientService {
     private final ClientRepository repository;
 
     public void registerClients(List<Client> clients) {
-        log.info("Registering clients... {}", clients);
+        log.info("Registering clients.. {}", clients);
         repository.saveAll(clients)
                 .stream()
                 .map(ClientMapper::toDto)
